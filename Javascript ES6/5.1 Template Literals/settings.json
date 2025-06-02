@@ -1,0 +1,17 @@
+{
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "prettier.jsxSingleQuote": true,
+  "prettier.singleQuote": true,
+  "prettier.htmlWhitespaceSensitivity": "ignore",
+  "prettier.plugins": ["prettier-plugin-organize-imports"],
+  "prettier.printWidth": 100,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "emmet.includeLanguages": {
+    "javascript": "html",
+    "javascriptreact": "html"
+  }
+}
