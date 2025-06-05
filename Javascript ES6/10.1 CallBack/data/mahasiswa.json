@@ -1,0 +1,30 @@
+[
+    {
+        "name" : "Alvian Cahyo Pambudi",
+        "nrp" : "0934898644",
+        "email" : "alviancahyopambudi@gmail.com",
+        "jurusan" : "Teknik Informatika",
+        "idDosenWali" : 1
+    },
+    {
+        "name" : "Dewi Kumala Putri Firdaus",
+        "nrp" : "0874653846",
+        "email" : "dewikumalaputrifirdaus@gmail.com",
+        "jurusan" : "Matematika dan IPA",
+        "idDosenWali" : 2
+    },
+    {
+        "name" : "Kayla Siti Kamelia",
+        "nrp" : "0877374422",
+        "email" : "kaylasitikamelia@gmail.com",
+        "jurusan" : "Hukum",
+        "idDosenWali" : 1
+    },
+    {
+        "name" : "Nur Khadijah Syarifah Suhailah Suryodiningrat",
+        "nrp" : "0934898644",
+        "email" : "nksyarifahsuhailahs@gmail.com",
+        "jurusan" : "Teknik Informatika",
+        "idDosenWali" : 2
+    }
+]
