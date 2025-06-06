@@ -3,18 +3,7 @@ $.ajax({
     success: results => {
         const movies = results.Search
         let cards = ""
-        movies.forEach(movie => {
-            cards += `<div class="col-md-4 my-5">
-                        <div class="card">
-                            <img src="${movie.Poster}" class="card-img-top" alt="">
-                            <div class="card-body">
-                                <h5 class="card-title">${movie.Title}</h5>
-                                <h6 class="card-subtitle mb-2 text-body-secondary">${movie.Year}</h6>
-                                <a href="#" class="btn btn-primary modal-detail-button" data-bs-toggle="modal" data-bs-target="#movieDetailModal" data-imdbid="${movie.imdbID}" >Show details</a>
-                            </div>
-                        </div>
-                    </div>`
-        })
+        movies.forEach()
 
         $('.movie-container').html(cards)
 
