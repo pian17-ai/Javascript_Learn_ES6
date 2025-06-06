@@ -62,6 +62,7 @@ function moreDetails (movie) {
                             <li class="list-group-item"><strong>Actors : </strong>${movie.Actors}</li>
                             <li class="list-group-item"><strong>Genre : </strong>${movie.Genre}</li>
                             <li class="list-group-item"><strong>Rating : </strong>${movie.imdbRating}</li>
+                            <li class="list-group-item"><strong>Plot : </strong>${movie.Plot}</li>
                         </ul>
                     </div>
                 </div>
