@@ -1,40 +1,44 @@
-$.ajax({
-    url: 'http://www.omdbapi.com/?apikey=dca61bcc&s=fast&',
-    success: results => {
-        const movies = results.Search
-        let cards = ""
-        movies.forEach(movie => {
-            cards += cardFilms(movie)
-        })
-
-        $('.movie-container').html(cards)
-
-        // KETIKA TOMBOL di btn KLIK
-        $('.modal-detail-button').on('click', function() {
-            $.ajax({
-                url: `http://www.omdbapi.com/?apikey=dca61bcc&i=${$(this).data('imdbid')}`,
-                success: movie => {
-                    const movieDetail = moreDetails(movie)
-
-                    $('.modal-body').html(movieDetail)
-                },
-            error: (e) => {
-                console.log(e.responseText)
-            }
-            });
-        })
-        
-        // -----------------------------------------------
-        // for(let i = 0; i < movies.length; i++) {
-        //     const name = movies[i].Title
-        //     console.log(name)
-        //     // title.innerHtml(name)
-        // }
-    },
-    error: (e) => {
-        console.log(e.responseText)
-    }
+$('.search-button').on('click', function () {
+    $.ajax({
+        url: 'http://www.omdbapi.com/?apikey=dca61bcc&s=' + $('.input-keyword').val(),
+        success: results => {
+            const movies = results.Search
+            let cards = ""
+            movies.forEach(movie => {
+                cards += cardFilms(movie)
+            })
+    
+            $('.movie-container').html(cards)
+    
+            // KETIKA TOMBOL di btn KLIK
+            $('.modal-detail-button').on('click', function() {
+                $.ajax({
+                    url: `http://www.omdbapi.com/?apikey=dca61bcc&i=${$(this).data('imdbid')}`,
+                    success: movie => {
+                        const movieDetail = moreDetails(movie)
+    
+                        $('.modal-body').html(movieDetail)
+                    },
+                error: (e) => {
+                    console.log(e.responseText)
+                }
+                });
+            })
+            
+            // -----------------------------------------------
+            // for(let i = 0; i < movies.length; i++) {
+            //     const name = movies[i].Title
+            //     console.log(name)
+            //     // title.innerHtml(name)
+            // }
+        },
+        error: (e) => {
+            console.log(e.responseText)
+        }
+    })
 })
+
+
 
 function cardFilms (movie) {
     return `<div class="col-md-4 my-5">
