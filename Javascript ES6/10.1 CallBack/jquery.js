@@ -1,8 +1,8 @@
 console.log('mulai')
 $.ajax({
-    url: 'data/mahasiswa.json',
+    url: 'http://127.0.0.1:8000/api/v1/posts',
     success: (mhs) => {
-        mhs.forEach(n => console.log(n.name))
+        console.log('successs')
     },
     error: (e) => {
         console.log(e.responseText)
