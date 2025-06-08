@@ -42,7 +42,7 @@ $('.search-button').on('click', function () {
 
 function cardFilms (movie) {
     return `<div class="col-md-4 my-5">
-                <div class="card">
+                <div class="card bg-gray">
                     <img src="${movie.Poster}" class="card-img-top" alt="">
                     <div class="card-body">
                         <h5 class="card-title">${movie.Title}</h5>
