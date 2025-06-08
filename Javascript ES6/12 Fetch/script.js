@@ -1,44 +1,3 @@
-// $('.search-button').on('click', function () {
-//     $.ajax({
-//         url: 'http://www.omdbapi.com/?apikey=dca61bcc&s=' + $('.input-keyword').val(),
-//         success: results => {
-//             const movies = results.Search
-//             let cards = ""
-//             movies.forEach(movie => {
-//                 cards += cardFilms(movie)
-//             })
-    
-//             $('.movie-container').html(cards)
-    
-//             // KETIKA TOMBOL di btn KLIK
-//             $('.modal-detail-button').on('click', function() {
-//                 $.ajax({
-//                     url: `http://www.omdbapi.com/?apikey=dca61bcc&i=${$(this).data('imdbid')}`,
-//                     success: movie => {
-//                         const movieDetail = moreDetails(movie)
-    
-//                         $('.modal-body').html(movieDetail)
-//                     },
-//                 error: (e) => {
-//                     console.log(e.responseText)
-//                 }
-//                 });
-//             })
-            
-//             // -----------------------------------------------
-//             // for(let i = 0; i < movies.length; i++) {
-//             //     const name = movies[i].Title
-//             //     console.log(name)
-//             //     // title.innerHtml(name)
-//             // }
-//         },
-//         error: (e) => {
-//             console.log(e.responseText)
-//         }
-//     })
-// })
-
-// fetch
 const searchButton = document.querySelector('.search-button')
 searchButton.addEventListener('click', function() {
 
@@ -48,7 +7,7 @@ searchButton.addEventListener('click', function() {
         .then(response => {
             const movies = response.Search;
             let cards = ''
-            movies.forEach(movies => cards += cardFilms(movies))
+            movies.forEach(movie => cards += cardFilms(movie))
             const movieContainer = document.querySelector('.movie-container')
             movieContainer.innerHTML = cards
 
